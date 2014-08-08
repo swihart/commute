@@ -1,8 +1,3 @@
----
-output:
-  html_document:
-    keep_md: yes
----
 Commute:  Live in Baltimore, Work at the NIH
 ========================================================
 
