@@ -1,7 +1,7 @@
 Commute:  Live in Baltimore, Work at the NIH
 ========================================================
 
-Looks like my commute to the NIH is more consistent than the ride home to Baltimore, and more fuel efficient too.  On the x-axis, 1 is Monday and 5 is Friday.
+Looks like my commute to the NIH is more consistent than the ride home to Baltimore, and more fuel efficient too.  On the x-axis, 1 is Monday and 5 is Friday.  On the y-axis, duration in minutes.
 
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 require(RCurl)
