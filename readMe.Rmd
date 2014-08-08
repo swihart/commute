@@ -31,7 +31,7 @@ ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
   facet_grid(.~destination)
 ```
 
-Without Facets:
+Without facetting:
 
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
