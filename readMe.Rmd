@@ -19,7 +19,11 @@ commute$destination<-factor(commute$destination, levels=rev(c("Baltimore","NIH")
 summary(commute$destination)
 library(ggplot2)
 ggplot(data=commute, aes(x=day, y=duration, size=mpg))+geom_point(alpha=.5,position = position_jitter(w = 0.1, h = 0))+facet_grid(.~destination)+scale_size_continuous(range = c(3,10))
+ggplot(data=commute, aes(x=mpg,   y=duration))+geom_point()+facet_grid(.~destination)+scale_size_continuous(range = c(3,10))
+ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+geom_point(alpha=.5)+scale_size_continuous(range = c(3,10))
 ```
+
+
 
 Check out the .Rmd file to see code on how to read spreadsheets from Google Drive!  Thanks to [Andrie de Vries and David Smith.](http://blog.revolutionanalytics.com/2014/06/reading-data-from-the-new-version-of-google-spreadsheets.html
 )
