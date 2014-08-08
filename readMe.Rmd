@@ -22,13 +22,17 @@ ggplot(data=commute, aes(x=day, y=duration, size=mpg, color=destination))+
   geom_point(alpha=.5,position = position_jitter(w = 0.1, h = 0))+
   facet_grid(.~destination)+scale_size_continuous(range = c(3,10))
 ```
+
 Another look at fuel efficiency:
+
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
   geom_point(alpha=.8,size=5)+
   facet_grid(.~destination)
 ```
+
 Without Facets:
+
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
   geom_point(alpha=.8,size=5)
