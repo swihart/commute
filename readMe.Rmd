@@ -29,8 +29,9 @@ Another look at fuel efficiency:
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
   geom_point(alpha=.8,size=5)+ 
-  scale_x_continuous(breaks=seq(range(commute$mpg, na.rm=TRUE)[1],range(commute$mpg, na.rm=TRUE)[2], length=4)) ## explicitly put min/max+ 
-  coord_cartesian(xlim=c(range(commute$mpg, na.rm=TRUE)[1]*.98,range(commute$mpg, na.rm=TRUE)[2]*1.02))+ ## give some space so numbers don't mash between facets+
+  scale_x_continuous(breaks=seq(range(commute$mpg, na.rm=TRUE)[1],range(commute$mpg, na.rm=TRUE)[2], length=4))+ ## explicitly put min/max 
+  coord_cartesian(xlim=c(range(commute$mpg, na.rm=TRUE)[1]*.90,range(commute$mpg, na.rm=TRUE)[2]*1.1))+ 
+  ## give some space so numbers don't mash between facets
   facet_grid(.~destination)
 ```
 
