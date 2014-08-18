@@ -10,6 +10,10 @@ Another look at fuel efficiency:
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
+```
+## Error: non-numeric argument to binary operator
+```
+
 Without facetting:
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
