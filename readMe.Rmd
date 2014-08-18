@@ -25,9 +25,11 @@ ggplot(data=commute, aes(x=day, y=duration, size=mpg, color=destination))+
 
 Another look at fuel efficiency:
 
+
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
-  geom_point(alpha=.8,size=5)+
+  geom_point(alpha=.8,size=5)+ 
+  scale_x_continuous(breaks=seq(range(commute$mpg, na.rm=TRUE)[1],range(commute$mpg, na.rm=TRUE)[2], length=4))+
   facet_grid(.~destination)
 ```
 
@@ -35,6 +37,7 @@ Without facetting:
 
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
+  scale_x_continuous(breaks=seq(range(commute$mpg, na.rm=TRUE)[1],range(commute$mpg, na.rm=TRUE)[2], length=4))+
   geom_point(alpha=.8,size=5)
 ```
 

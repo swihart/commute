@@ -7,6 +7,7 @@ Looks like my commute to the NIH is more consistent than the ride home to Baltim
 
 Another look at fuel efficiency:
 
+
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 Without facetting:
