@@ -34,7 +34,7 @@ ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
   geom_point(alpha=.8,size=5)+ 
   scale_y_continuous(breaks=seq(range(commute$duration, na.rm=TRUE)[1],range(commute$duration, na.rm=TRUE)[2], length=6))+ ## explicitly put min/max for y axis 
   scale_x_continuous(breaks=seq(range(commute$mpg, na.rm=TRUE)[1],range(commute$mpg, na.rm=TRUE)[2], length=4))+ ## explicitly put min/max 
-  coord_cartesian(xlim=c(range(commute$mpg, na.rm=TRUE)[1]*.90,range(commute$mpg, na.rm=TRUE)[2]*1.1))+ 
+  coord_cartesian(xlim=c(range(commute$mpg, na.rm=TRUE)[1]*.95,range(commute$mpg, na.rm=TRUE)[2]*1.05))+ 
   ## give some space so numbers don't mash between facets
   facet_grid(.~destination)
 ```
