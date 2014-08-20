@@ -21,9 +21,28 @@ commute <- commute[complete.cases(commute[,c("mpg","duration","destination","day
 summary(commute$destination)
 ## calculate actual data-breaks:
 n_rec<-nrow(commute)
+## real-data max, min and then put real data spots at (near)quantiles:
 breaks_mpg     <- sort(commute$mpg)[c(1, round(n_rec*.25), round(n_rec*.75), n_rec)]
-# breaks_mpg<- sort(commute$mpg)[c(1, round(n_rec*.2), round(n_rec*.4), round(n_rec*.6), round(n_rec*.8), n_rec)]
 breaks_duration<- sort(commute$duration)[c(1, round(n_rec*.2), round(n_rec*.4), round(n_rec*.6), round(n_rec*.8), n_rec)]
+## real-data max, min and then equally divide up space between:
+equal_spaced_read_data_labels<-function(data,nlabels){
+  mn<-min(data,na.rm=TRUE)
+  mx<-max(data,na.rm=TRUE)
+  rg<-mx-mn
+  sp<-rg/(nlabels-1)
+  sq<-seq(mn,mx,by=sp)
+  i<-1
+  nearest<-rep(NA,nlabels-2)
+  for(v in sq[c(-1,-length(sq))]){
+    dists<-(data-v)^2
+    mn.d<-min(dists,na.rm=TRUE)
+    nearest[i]<- data[dists %in% mn.d][1]
+    i<-i+1
+    }
+  c(mn,nearest,mx)
+}
+breaks_mpg<-equal_spaced_read_data_labels(commute$mpg,4)
+breaks_duration<-equal_spaced_read_data_labels(commute$mpg,6)
 library(ggplot2)
 ggplot(data=commute, aes(x=day, y=duration, size=mpg, color=destination))+
   geom_point(alpha=.5,position = position_jitter(w = 0.1, h = 0))+ 
@@ -35,14 +54,6 @@ Another look at fuel efficiency:
 
 
 ```{r fig.width=7, fig.height=6, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
-# ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
-#   geom_point(alpha=.8,size=5)+ 
-#   scale_y_continuous(breaks=seq(range(commute$duration, na.rm=TRUE)[1],range(commute$duration, na.rm=TRUE)[2], length=6))+ ## explicitly put min/max for y axis 
-#   scale_x_continuous(breaks=seq(range(commute$mpg, na.rm=TRUE)[1],range(commute$mpg, na.rm=TRUE)[2], length=4))+ ## explicitly put min/max 
-#   coord_cartesian(xlim=c(range(commute$mpg, na.rm=TRUE)[1]*.95,range(commute$mpg, na.rm=TRUE)[2]*1.05))+ 
-#   ## give some space so numbers don't mash between facets
-#   facet_grid(.~destination)
-## get actual data in x-axis
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
   geom_point(alpha=.8,size=5)+ 
   scale_y_continuous(breaks=breaks_duration)+ ## explicitly put min/max for y axis 
