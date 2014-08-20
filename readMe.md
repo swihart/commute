@@ -16,7 +16,7 @@ Without facetting:
 
 Stray Observations:
  
- _The Slow Burn_ was a success!  I kept it 55 the whole way and broke the 45 MPG barrier with 48.7.  Next goal is 50 MPG.
+ _The Slow Burn_ was a success (8/20/2014)!  I kept it 55 MPH the whole way and broke the 45 MPG barrier with 48.7 MPG clocking in at 53 minutes (obviously took more time, but there might be wiggle room because there was a wreck late on 495).  Next goal is 50 MPG at under an hour.
 
 
 Check out the .Rmd file to see code on how to read spreadsheets from Google Drive into R!  Many thanks to [Andrie de Vries and David Smith.](http://blog.revolutionanalytics.com/2014/06/reading-data-from-the-new-version-of-google-spreadsheets.html
