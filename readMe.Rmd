@@ -42,7 +42,7 @@ equal_spaced_read_data_labels<-function(data,nlabels){
   c(mn,nearest,mx)
 }
 breaks_mpg<-equal_spaced_read_data_labels(commute$mpg,4)
-breaks_duration<-equal_spaced_read_data_labels(commute$mpg,6)
+breaks_duration<-equal_spaced_read_data_labels(commute$duration,6)
 library(ggplot2)
 ggplot(data=commute, aes(x=day, y=duration, size=mpg, color=destination))+
   geom_point(alpha=.5,position = position_jitter(w = 0.1, h = 0))+ 
