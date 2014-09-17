@@ -69,8 +69,8 @@ Without facetting:
 ggplot(data=commute, aes(x=mpg,   y=duration, color=destination))+
   scale_y_continuous(breaks=breaks_duration)+ ## explicitly put min/max for y axis 
   scale_x_continuous(breaks=breaks_mpg)+ ## explicitly put min/max 
-  geom_point(alpha=.8,size=5)+
-  geom_abline(intercept=0)
+  geom_point(alpha=.8,size=5)#+
+  #geom_abline(intercept=0) ## x=y line
 ```
 
 Stray Observations:
