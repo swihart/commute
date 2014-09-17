@@ -18,7 +18,7 @@ Stray Observations:
  
  _The Slow Burn_ was a success (8/20/2014)!  I kept it 55 MPH the whole way and broke the 45 MPG barrier with 48.7 MPG clocking in at 53 minutes (obviously took more time, but there might be wiggle room because there was a wreck late on 495).  Next goal is 50 MPG at under an hour.
 
-_The Fast Burn_ was also a success (9/4/2014)!  I "kept with the flow of traffic" and broke the 40 minute duration barrier with 38.75 minutes registering a still respectable 37.1 MPG.  There is no new speed goal.
+_The Fast Burn_ was also a success (9/4/2014)!  I "kept with the flow of traffic" and broke the 40 minute duration barrier with 38.75 minutes registering a still respectable 37.1 MPG.  There is no new speed goal.  I did a 38.25 (from SBUX) at 36.0 MPG on (9/17/2014).
 
 _The Triple Point_:  elusive, beautiful, mysterious:  39 minutes, 39 MPG, 39-ish miles.  
 
